@@ -9,7 +9,7 @@ default: &default
 
 sbt:
   <<: *default
-  command: sbt
+  entrypoint: sbt
 
 c:
   <<: *default
