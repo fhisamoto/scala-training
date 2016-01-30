@@ -1,4 +1,4 @@
-web:
+default: &default
   image: 99taxis/activator
   ports:
     - 9000:9000
@@ -6,3 +6,11 @@ web:
     - ./:/app
     - ~/.ivy2:/root/.ivy2
     - ~/.m2:/root/.m2
+
+sbt:
+  <<: *default
+  command: sbt
+
+c:
+  <<: *default
+  command: /bin/bash
